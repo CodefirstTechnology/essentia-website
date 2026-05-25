@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIA | Amenities &amp; Masterplan</title>
+  <!-- Design reference: assets/images/Amenities.png -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-amenities" data-page="amenities">
+
+  <header class="site-header glass-nav">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">
+        <span class="material-symbols-outlined icon-filled icon-md text-primary">spa</span>
+        <span class="nav-brand nav-brand--sm">ESSENTIA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">The Collection</a>
+        <a href="Amenities.html" class="nav-link is-active">Amenities</a>
+        <a href="#masterplan" class="nav-link">Masterplan</a>
+        <a href="About.html" class="nav-link">Sustainability</a>
+        <a href="contanct.html" class="btn btn-primary nav-cta">BOOK VISIT</a>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined icon-md">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel" id="drawer-panel">
+      <div>
+        <div class="flex justify-between items-center" style="margin-bottom: 48px;">
+          <a href="index.html" class="nav-logo">
+            <span class="material-symbols-outlined icon-filled icon-md text-primary">spa</span>
+            <span class="nav-brand nav-brand--sm">ESSENTIA</span>
+          </a>
+          <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+            <span class="material-symbols-outlined icon-md">close</span>
+          </button>
+        </div>
+        <nav class="drawer-nav">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="About.html" class="nav-link">ABOUT</a>
+          <a href="Amenities.html" class="nav-link is-active">WELLNESS</a>
+          <a href="contanct.html" class="nav-link">CONTACT</a>
+        </nav>
+      </div>
+      <a href="contanct.html" class="btn btn-primary" style="width:100%; padding: 16px;">BOOK VISIT</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="container amenities-intro" aria-labelledby="amenities-heading">
+      <div style="max-width: 48rem;">
+        <span class="text-label text-gold tracking-widest" style="display:block; margin-bottom: 16px;">THE LIFESTYLE</span>
+        <h1 id="amenities-heading" class="text-display-lg text-primary">Architectural Serenity Defined by Nature.</h1>
+        <p class="text-body-lg text-secondary" style="margin-top: 32px;">Essentia Sanctuary is more than a residence; it is a meticulously curated ecosystem designed to nourish the soul. Experience an intersection of cutting-edge wellness and organic tranquility.</p>
+      </div>
+    </section>
+
+    <section class="container amenities-bento" aria-label="Amenities showcase">
+      <div class="grid amenities-bento-layout">
+        <article class="bento-main">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMXB1UN4Fytzkkbg3E6aoGyvmUTHe0UxYxULT1r7dOzANnBghfn15dP5kUtl9-te-FRbSCmmq6GfBERQUIjtcYjj37JszIzaIBGyG_7c5mVjaYXqt1Z1QpknIAiVwPto9nysXx_fM0fKjjAjBnLX6D-nzuNGjn0grlCpNJin3SXP3mrfmqoDV31JzzBZ0hiEtOTG6uxXwUGmPVh3g5ufFTNmkMiM68hcheq31CjTNr6NeIFhRUpMzHi3UCImDDKFEY1BwPpMqTcks8" alt="Luxury amenities pavilion">
+          <div class="bento-main__overlay">
+            <h3 class="text-headline-md">The Central Pavilion</h3>
+            <p class="text-body-md" style="opacity:0.9; max-width: 32rem; margin-top: 8px;">A sanctuary of light and glass designed by world-renowned architects to serve as the heart of our community.</p>
+          </div>
+        </article>
+        <div class="amenities-side-cards">
+          <article class="amenity-glass-card glass-card">
+            <div class="amenity-glass-card__top">
+              <div class="icon-circle-sm"><span class="material-symbols-outlined">pool</span></div>
+              <span class="material-symbols-outlined arrow-icon">arrow_outward</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md text-primary" style="font-size: 24px; margin-bottom: 8px;">Infinite Pool</h4>
+              <p class="text-body-md text-secondary">A temperature-controlled sanctuary overlooking the valley.</p>
+            </div>
+          </article>
+          <article class="amenity-glass-card glass-card">
+            <div class="amenity-glass-card__top">
+              <div class="icon-circle-sm"><span class="material-symbols-outlined">self_improvement</span></div>
+              <span class="material-symbols-outlined arrow-icon">arrow_outward</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md text-primary" style="font-size: 24px; margin-bottom: 8px;">Zen Studio</h4>
+              <p class="text-body-md text-secondary">Soundproofed meditation zones with panoramic nature views.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="grid grid-4 amenity-icon-grid" style="margin-top: var(--gutter);">
+        <div class="icon-tile"><span class="material-symbols-outlined text-gold">sports_gymnastics</span><span class="text-label text-primary">Wellness Hub</span></div>
+        <div class="icon-tile"><span class="material-symbols-outlined text-gold">forest</span><span class="text-label text-primary">Forest Trails</span></div>
+        <div class="icon-tile"><span class="material-symbols-outlined text-gold">restaurant_menu</span><span class="text-label text-primary">Organic Bistro</span></div>
+        <div class="icon-tile"><span class="material-symbols-outlined text-gold">concierge</span><span class="text-label text-primary">Lifestyle Concierge</span></div>
+      </div>
+    </section>
+
+    <section id="masterplan" class="masterplan-section" aria-labelledby="masterplan-heading">
+      <div class="masterplan-texture inset-0 absolute" aria-hidden="true"></div>
+      <div class="container masterplan-layout">
+        <div class="masterplan-info">
+          <span class="text-label text-gold tracking-widest" style="display:block; margin-bottom: 24px;">MASTERPLAN</span>
+          <h2 id="masterplan-heading" class="text-display-lg text-white" style="color: var(--on-primary); margin-bottom: 32px;">Harmonizing Structure &amp; Soil.</h2>
+          <div class="masterplan-item" onclick="setActiveMarker(1)" role="button" tabindex="0">
+            <div class="masterplan-indicator is-active" id="indicator-1"></div>
+            <div>
+              <h4>Residential Enclave</h4>
+              <p>Ultra-luxury villas nested within the dense emerald canopy.</p>
+            </div>
+          </div>
+          <div class="masterplan-item" onclick="setActiveMarker(2)" role="button" tabindex="0">
+            <div class="masterplan-indicator" id="indicator-2"></div>
+            <div>
+              <h4>The Emerald Ring</h4>
+              <p>3km of interconnected jogging tracks and bio-diversity zones.</p>
+            </div>
+          </div>
+          <div class="masterplan-item" onclick="setActiveMarker(3)" role="button" tabindex="0">
+            <div class="masterplan-indicator" id="indicator-3"></div>
+            <div>
+              <h4>Retail Boulevard</h4>
+              <p>Curated luxury boutiques and fine-dining experiences.</p>
+            </div>
+          </div>
+          <div class="masterplan-toggle" style="margin-top: 48px;">
+            <button type="button" class="toggle-btn is-active" id="btn-experience">Experience</button>
+            <button type="button" class="toggle-btn" id="btn-investor">Investor Data</button>
+          </div>
+        </div>
+        <div class="masterplan-map">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABUMGwdXxjFj_AI0764cxx29yJYn7UDK08ISQ0vQWqVoZKPADqzOsGRFSOG1Q45yH3o3i5PVHBpHQGu9X5X9XOIve4iXxkckoWdcUrRwKk4mtK0UsbEvCO2yH29DUKCHMOoxnnb4iUMVer6tb2ZgCW2nzBUe8H1Yd_acqW_2BgtiHBPAnJFf9B-L2Jcgm6yMxk1Lt28K_H1gH9skOpx43YDIqQcXR7lqalN7stWYWOK5VIWZtwAJpqwQXSFegsSymkg53g9pUWaIoq" alt="Masterplan visualization">
+          <div class="map-marker map-marker--1" id="marker-1" onclick="setActiveMarker(1)">
+            <div class="marker-dot marker-dot--active marker-pulse"><span class="marker-dot__inner"></span></div>
+            <div class="marker-tooltip glass-card"><p class="text-label text-primary">Signature Villas</p></div>
+          </div>
+          <div class="map-marker map-marker--2" id="marker-2" onclick="setActiveMarker(2)">
+            <div class="marker-dot marker-dot--inactive"><span class="marker-dot__inner"></span></div>
+            <div class="marker-tooltip glass-card"><p class="text-label text-primary">Jogging Track</p></div>
+          </div>
+          <div class="map-marker map-marker--3" id="marker-3" onclick="setActiveMarker(3)">
+            <div class="marker-dot marker-dot--inactive"><span class="marker-dot__inner"></span></div>
+            <div class="marker-tooltip glass-card"><p class="text-label text-primary">Luxury Retail</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section container" aria-labelledby="cta-heading">
+      <h2 id="cta-heading" class="text-display-lg text-primary">Secure Your Place in Paradise.</h2>
+      <div class="cta-actions">
+        <button type="button" class="btn btn-primary btn-primary-lg">DOWNLOAD BROCHURE</button>
+        <button type="button" class="btn btn-outline-gold">VIRTUAL TOUR</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid grid grid-footer" style="padding-top: 80px; padding-bottom: 80px;">
+      <div>
+        <span class="text-headline-md text-primary" style="display:block; margin-bottom: 24px;">ESSENTIA</span>
+        <p class="text-body-md text-secondary" style="margin-bottom: 32px;">Building legacies through architectural excellence and environmental stewardship.</p>
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-primary" style="cursor:pointer;">public</span>
+          <span class="material-symbols-outlined text-primary" style="cursor:pointer;">share</span>
+          <span class="material-symbols-outlined text-primary" style="cursor:pointer;">mail</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h5 class="text-label text-primary">EXPLORE</h5>
+        <a href="index.html" class="text-body-md text-secondary">The Collection</a>
+        <a href="Amenities.html" class="text-body-md text-primary font-semibold">Amenities</a>
+        <a href="About.html" class="text-body-md text-secondary">Sustainability</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h5 class="text-label text-primary">RESOURCES</h5>
+        <a href="#" class="text-body-md text-secondary">Investment Guide</a>
+        <a href="#" class="text-body-md text-secondary">Masterplan PDF</a>
+        <a href="#" class="text-body-md text-secondary">Media Kit</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h5 class="text-label text-primary">CONTACT</h5>
+        <p class="text-body-md text-secondary">The Esplanade 404, Sanctuary District, GC 90210</p>
+        <p class="text-body-md text-secondary">+1 800-ESS-NTIA</p>
+      </div>
+    </div>
+    <div class="container footer-bottom footer-bottom--flex">
+      <span class="text-body-md text-secondary">© 2024 ESSENTIA Sanctuary. All rights reserved.</span>
+      <div class="flex gap-8">
+        <a href="#" class="text-caption text-secondary">Privacy Policy</a>
+        <a href="#" class="text-caption text-secondary">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

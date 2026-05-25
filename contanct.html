@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIA | Contact</title>
+  <!-- Design reference: assets/images/contanct.png -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contact" data-page="contact">
+
+  <header class="site-header glass-nav">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo text-primary">
+        <span class="material-symbols-outlined icon-lg">spa</span>
+        <span class="nav-brand nav-brand--contact">ESSENTIA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">THE COLLECTION</a>
+        <a href="Amenities.html" class="nav-link">WELLNESS</a>
+        <a href="contanct.html" class="nav-link is-active">CONTACT</a>
+        <a href="contanct.html" class="btn btn-primary nav-cta" style="letter-spacing: 0.1em;">BOOK VISIT</a>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined icon-md">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel" id="drawer-panel">
+      <div>
+        <div class="flex justify-between items-center" style="margin-bottom: 48px;">
+          <a href="index.html" class="nav-logo text-primary">
+            <span class="material-symbols-outlined icon-lg">spa</span>
+            <span class="nav-brand nav-brand--sm">ESSENTIA</span>
+          </a>
+          <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+            <span class="material-symbols-outlined icon-md">close</span>
+          </button>
+        </div>
+        <nav class="drawer-nav">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="About.html" class="nav-link">ABOUT</a>
+          <a href="Amenities.html" class="nav-link">WELLNESS</a>
+          <a href="contanct.html" class="nav-link is-active">CONTACT</a>
+        </nav>
+      </div>
+      <a href="contanct.html" class="btn btn-primary" style="width:100%; padding: 16px;">BOOK VISIT</a>
+    </div>
+  </div>
+
+  <main class="forest-gradient">
+    <section class="container contact-hero-grid" aria-labelledby="contact-heading">
+      <div>
+        <h1 id="contact-heading" class="text-display-lg text-primary">Begin Your Journey to Sanctuary</h1>
+        <p class="text-body-lg text-muted">Whether you are looking for an investment or a private retreat, our advisors are here to curate your Essentia experience.</p>
+        <div class="contact-actions">
+          <button type="button" class="btn btn-whatsapp">
+            <span class="material-symbols-outlined">chat</span>
+            WHATSAPP ADVISOR
+          </button>
+          <button type="button" class="btn btn-call">
+            <span class="material-symbols-outlined">call</span>
+            CALL NOW
+          </button>
+        </div>
+      </div>
+      <div class="contact-form-col">
+        <div class="form-card glass-card">
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="fullname">FULL NAME</label>
+              <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">EMAIL ADDRESS</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="email@sanctuary.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">PHONE NUMBER</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group form-select-wrap">
+              <label for="interest">INTEREST</label>
+              <select id="interest" name="interest" class="form-input form-select">
+                <option>Private Villa Selection</option>
+                <option>Investment Opportunities</option>
+                <option>Wellness Retreat Booking</option>
+                <option>Sustainability Partnerships</option>
+              </select>
+              <span class="material-symbols-outlined select-arrow">expand_more</span>
+            </div>
+            <button type="submit" class="btn-submit">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="distinction-section" aria-labelledby="distinction-heading">
+      <div class="container">
+        <header class="text-center" style="margin-bottom: 64px;">
+          <h2 id="distinction-heading" class="text-headline-lg text-primary" style="margin-bottom: 16px;">The Essentia Distinction</h2>
+          <p class="text-body-lg text-secondary" style="max-width: 42rem; margin: 0 auto;">Unparalleled standards of living, curated for those who demand the extraordinary.</p>
+        </header>
+        <div class="grid grid-2">
+          <article class="distinction-card">
+            <div class="distinction-card__img">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeWhGtYC0Mf9_BBa_4ji4wOApfKfF9bi7TTbpBHd16Sc2tLzttrBV6el17eFmQlwWecWhojxzIO_ERmFenv4a6K3zRO1CF_xt6OswmNpwWN87XSNHzM1Q4aJbSScQRNlld8n8e8TQ0XuuCGlDpdzE4HKyvuawoiyoX7NpqH3oG9liWJAj45JEDlq1EYzNmgqAFxOUf_FOaTTpf4yZZjAdx2GvMgbgoXYUJpO8CVicGURLkUl7WD0L4Jkek2ccuRkYf8xUx0VscDHWJ" alt="Premium coastal location">
+            </div>
+            <div class="distinction-card__body">
+              <div class="flex items-center gap-4" style="margin-bottom: 16px;">
+                <span class="material-symbols-outlined icon-md text-gold">location_on</span>
+                <h3 class="text-headline-md text-primary">Premium Location</h3>
+              </div>
+              <p class="text-body-md text-muted">Nestled in the world's most sought-after ecological corridors, offering a perfect balance of seclusion and connectivity to urban centers.</p>
+            </div>
+          </article>
+          <article class="distinction-card">
+            <div class="distinction-card__img">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbIZCnYuIf1bPnPyyxJqP1ANSoIp3OdcNapQPUlCRTTZW2DgvjyVK-xAd00LkPthruAM0UB4f6lhQKRfoXeLN0qPIuqDxwbv7TZnq0tWa_AdvidlYIRsHPb7M8criqh6uZ3niVAmQ9Ts03_2yrtNlukvS2_AQ3gWR_n3_ugvMci-1I01buwfqiDNqUq0yqH2C32CPJx3Xjd5r9ta8JHyIm_Liel_HxXnv4ynu6lhrD0Fbum_daMmMJWFl1jrI8i_mdEqEDB63f4YBz" alt="Secure gated community">
+            </div>
+            <div class="distinction-card__body">
+              <div class="flex items-center gap-4" style="margin-bottom: 16px;">
+                <span class="material-symbols-outlined icon-md text-gold">shield_with_heart</span>
+                <h3 class="text-headline-md text-primary">Secure Township</h3>
+              </div>
+              <p class="text-body-md text-muted">Advanced biometric security and 24/7 concierge management ensure your peace of mind is never compromised within our gated sanctuaries.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid grid grid-footer">
+      <div>
+        <div class="nav-logo" style="margin-bottom: 32px;">
+          <span class="material-symbols-outlined icon-md text-primary">spa</span>
+          <span class="text-headline-md text-primary">ESSENTIA</span>
+        </div>
+        <p class="text-body-md text-secondary">Crafting sanctuaries that harmonize modern architectural precision with the timeless serenity of the natural world.</p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-label text-primary uppercase tracking-widest">Explore</h4>
+        <a href="index.html" class="text-body-md text-secondary">The Collection</a>
+        <a href="Amenities.html" class="text-body-md text-secondary">Wellness</a>
+        <a href="About.html" class="text-body-md text-secondary">Sustainability</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-label text-primary uppercase tracking-widest">Information</h4>
+        <a href="About.html" class="text-body-md text-secondary">Investment</a>
+        <a href="contanct.html" class="text-body-md text-primary font-semibold">Contact</a>
+        <a href="#" class="text-body-md text-secondary">Privacy Policy</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-label text-primary uppercase tracking-widest">Connect</h4>
+        <p class="text-body-md text-secondary">Suite 405, Sanctuary Plaza<br>The Estates, SC 29401</p>
+        <div class="flex gap-4" style="margin-top: 16px;">
+          <span class="material-symbols-outlined text-secondary" style="cursor:pointer; opacity:0.8;">public</span>
+          <span class="material-symbols-outlined text-secondary" style="cursor:pointer; opacity:0.8;">mail</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom footer-bottom--flex">
+      <p class="text-body-md text-muted text-caption">© 2024 ESSENTIA Sanctuary. All rights reserved.</p>
+      <div class="flex gap-8">
+        <span class="text-caption text-secondary">INSTAGRAM</span>
+        <span class="text-caption text-secondary">LINKEDIN</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

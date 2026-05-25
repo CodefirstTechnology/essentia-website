@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIA - Thoughtfully Planned Sanctuary</title>
+  <!-- Design reference: assets/images/about.png -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-about" data-page="about">
+
+  <header class="site-header glass-nav">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">
+        <span class="material-symbols-outlined icon-md text-primary">spa</span>
+        <span class="nav-brand text-headline-md" style="font-size: var(--text-headline-md);">ESSENTIA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="About.html" class="nav-link is-active">About</a>
+        <a href="Amenities.html" class="nav-link">Wellness</a>
+        <a href="contanct.html" class="nav-link">Contact</a>
+        <a href="contanct.html" class="btn btn-primary nav-cta">BOOK VISIT</a>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined icon-md">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel" id="drawer-panel">
+      <div>
+        <div class="flex justify-between items-center" style="margin-bottom: 48px;">
+          <a href="index.html" class="nav-logo">
+            <span class="material-symbols-outlined icon-md text-primary">spa</span>
+            <span class="nav-brand nav-brand--sm">ESSENTIA</span>
+          </a>
+          <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+            <span class="material-symbols-outlined icon-md">close</span>
+          </button>
+        </div>
+        <nav class="drawer-nav">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="About.html" class="nav-link is-active">ABOUT</a>
+          <a href="Amenities.html" class="nav-link">WELLNESS</a>
+          <a href="contanct.html" class="nav-link">CONTACT</a>
+        </nav>
+      </div>
+      <a href="contanct.html" class="btn btn-primary" style="width:100%; padding: 16px;">BOOK VISIT</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="container about-hero-grid" aria-labelledby="about-hero-heading">
+      <div class="about-hero__text">
+        <span class="text-label text-gold uppercase tracking-widest" style="display:block; margin-bottom: 16px;">Our Philosophy</span>
+        <h1 id="about-hero-heading" class="text-display-lg text-primary" style="margin-bottom: 32px;">
+          A Sanctuary of <br>
+          <span class="italic font-light">Organic Precision</span>
+        </h1>
+        <p class="text-body-lg text-muted" style="max-width: 36rem; margin-bottom: 40px;">Essentia is not just a residence; it is a thoughtfully planned township where modern architectural excellence meets the restorative power of nature.</p>
+        <div class="about-hero__badges">
+          <div class="badge-pill"><span class="material-symbols-outlined text-primary">eco</span><span class="text-label">Sustainable Core</span></div>
+          <div class="badge-pill"><span class="material-symbols-outlined text-primary">family_restroom</span><span class="text-label">Community First</span></div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-visual__frame">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuqyx0PBuUTwfF96CSpPsAr0ZPXGqLNX6KLevvPUxHbUscDEcduldt9GRNF2QdRYzP3rb8LvOXKQNF_LbHgw1SCGGWaWsLuxjth0F2WqmzIlFhAnfRrwlWvXfy6LZa6zCjmbaixcc2rbLOtukc4gwsmKjHtMg52Vm905FHAwx4iAcJIiFU3ivuc-GNlUKn2VXdDXw1iF7y1if6-r8qZYOuSzd73udgB06fEspEaZx8MmSAazzLzymeFiNBfakTKZGdU3D_4Tc-PjZF" alt="Happy family in garden">
+          <div class="hero-gradient inset-0 absolute"></div>
+        </div>
+        <aside class="float-card float-card--left glass-card">
+          <span class="material-symbols-outlined icon-xl text-gold" style="margin-bottom: 16px;">energy_savings_leaf</span>
+          <h4 class="text-headline-md text-primary" style="font-size: var(--text-body-lg); margin-bottom: 8px;">Biophilic Design</h4>
+          <p class="text-caption text-muted">Integrating natural elements directly into your living spaces for enhanced mental clarity.</p>
+        </aside>
+        <aside class="float-card float-card--right glass-card">
+          <div class="flex items-center gap-4">
+            <div class="float-card__icon-circle"><span class="material-symbols-outlined">verified</span></div>
+            <div>
+              <div class="text-label text-primary">Eco-Certified</div>
+              <div class="text-caption text-secondary">Gold Standard Town Planning</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="pillars-section section" aria-labelledby="pillars-heading">
+      <div class="container">
+        <header class="pillars-header">
+          <h2 id="pillars-heading" class="text-headline-lg text-primary">Designed for Living Well</h2>
+          <p class="text-body-lg text-muted">Every square meter of Essentia is calibrated to support a life of comfort, connectivity, and absolute tranquility.</p>
+        </header>
+        <div class="grid grid-3">
+          <article class="pillar-card">
+            <div class="icon-circle"><span class="material-symbols-outlined icon-md">hub</span></div>
+            <h3 class="text-headline-md text-primary">Seamless Connectivity</h3>
+            <p class="text-body-md">Strategically located with direct access to major transit corridors while remaining a secluded paradise away from urban noise.</p>
+            <div class="pillar-link">Explore Location <span class="material-symbols-outlined">arrow_forward</span></div>
+          </article>
+          <article class="pillar-card">
+            <div class="icon-circle"><span class="material-symbols-outlined icon-md">home_max</span></div>
+            <h3 class="text-headline-md text-primary">Unmatched Comfort</h3>
+            <p class="text-body-md">Smart home integration, climate-controlled interiors, and ergonomic layouts that anticipate your needs before you do.</p>
+            <div class="pillar-link">View Residences <span class="material-symbols-outlined">arrow_forward</span></div>
+          </article>
+          <article class="pillar-card">
+            <div class="icon-circle"><span class="material-symbols-outlined icon-md">groups_3</span></div>
+            <h3 class="text-headline-md text-primary">Community Living</h3>
+            <p class="text-body-md">Exclusive clubhouses, shared gardens, and curated social events that foster genuine connections between neighbors.</p>
+            <div class="pillar-link">The Lifestyle <span class="material-symbols-outlined">arrow_forward</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-toggle-section" aria-labelledby="toggle-heading">
+      <div class="flex flex-col items-center">
+        <div class="toggle-slider-wrap">
+          <div class="toggle-slider-bg" id="toggle-bg"></div>
+          <button type="button" class="toggle-slider-btn is-active" id="btn-experience">Experience View</button>
+          <button type="button" class="toggle-slider-btn" id="btn-investor">Investor View</button>
+        </div>
+        <div class="toggle-split w-full" id="content-experience">
+          <div class="toggle-split__image">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOTxUd_W7TyvO82pdxFWlZskqwAVDoDGUtsn8zrKh_BBDDkKwkhXQ8bmjKPvhd-jqtTKaOU_3zng5EYnbLaTnQUkBezsNHs_sPGwatIMFM1Z99SfQ8t0-XcCY5DFDwhMQkHmWGA83pJu9Go3Sa6vp8hHU-WHtomDOIeRwMGgAa-acZSMA1Y2LdVpcGrolzREImPV86XduJ6j9SLyMPKC0ZSujcb7kNG9_Z5Yd-hLCR58tPUL8J1TMIAqpyXZ74ZOikCx_juIItiU2k" alt="Luxury modern villa at sunset">
+          </div>
+          <div class="toggle-split__content toggle-split__content--pad">
+            <h3 class="text-headline-lg text-primary">Immersive Living</h3>
+            <p class="text-body-lg text-muted">Wake up to the sounds of nature. Our township design prioritizes visual corridors that ensure every home has a view of the sprawling central park.</p>
+            <ul class="feature-list">
+              <li><span class="material-symbols-outlined text-gold">water_drop</span><span class="text-body-md">Thermal Infinity Pools</span></li>
+              <li><span class="material-symbols-outlined text-gold">psychology</span><span class="text-body-md">Meditation Pavilions</span></li>
+              <li><span class="material-symbols-outlined text-gold">forest</span><span class="text-body-md">Private Woodland Trails</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="toggle-split w-full is-hidden" id="content-investor">
+          <div class="toggle-split__content toggle-split__text-col toggle-split__content--pad-right">
+            <h3 class="text-headline-lg text-primary">Unrivaled Growth</h3>
+            <p class="text-body-lg text-muted">Strategically positioned in the city's fastest-growing corridor, Essentia represents a blue-chip asset with projected 18% annual capital appreciation.</p>
+            <div class="investor-stats">
+              <div class="investor-stat-box"><div class="value">12.5%</div><div class="text-caption text-muted uppercase">Rental Yield</div></div>
+              <div class="investor-stat-box"><div class="value">40%</div><div class="text-caption text-muted uppercase">Green Coverage</div></div>
+            </div>
+          </div>
+          <div class="toggle-split__image toggle-split__image-col">
+            <div class="roadmap-panel">
+              <div class="roadmap-inner">
+                <h4 class="text-label">Development Roadmap 2024-2026</h4>
+                <div class="timeline-item">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-title text-label">Phase 1: Infrastructure</div>
+                  <div class="text-caption" style="opacity:0.6;">Completed Q2 2024</div>
+                </div>
+                <div class="timeline-item is-active">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-title text-label">Phase 2: Residential Handover</div>
+                  <div class="text-caption" style="opacity:0.6;">In Progress - Q4 2025</div>
+                </div>
+                <div class="timeline-item is-dim">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-title text-label">Phase 3: Retail &amp; Leisure</div>
+                  <div class="text-caption">Scheduled Q2 2026</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid grid grid-footer">
+      <div class="flex flex-col gap-6">
+        <div class="nav-logo">
+          <span class="material-symbols-outlined icon-sm text-primary">spa</span>
+          <span class="text-headline-md text-primary">ESSENTIA</span>
+        </div>
+        <p class="text-body-md text-secondary">Crafting extraordinary spaces that honor nature and elevate the human experience.</p>
+      </div>
+      <div>
+        <h5 class="text-label text-primary">Navigation</h5>
+        <nav class="flex flex-col gap-2" style="margin-top: 16px;">
+          <a href="index.html" class="text-body-md text-secondary">The Collection</a>
+          <a href="Amenities.html" class="text-body-md text-secondary">Wellness</a>
+          <a href="About.html" class="text-body-md text-secondary">Sustainability</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="text-label text-primary">Investors</h5>
+        <nav class="flex flex-col gap-2" style="margin-top: 16px;">
+          <a href="#" class="text-body-md text-secondary">Investment Portal</a>
+          <a href="#" class="text-body-md text-secondary">Annual Report</a>
+          <a href="#" class="text-body-md text-secondary">Strategic Partners</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="text-label text-primary">Newsletter</h5>
+        <p class="text-caption text-secondary" style="margin: 16px 0;">Join our inner circle for exclusive previews.</p>
+        <div class="footer-input-wrap">
+          <input type="email" class="footer-input" placeholder="Email Address" aria-label="Email">
+          <button type="button" class="footer-input-btn"><span class="material-symbols-outlined">arrow_right_alt</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom footer-bottom--flex">
+      <p class="text-caption text-secondary">© 2024 ESSENTIA Sanctuary. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-caption text-secondary">Privacy Policy</a>
+        <a href="#" class="text-caption text-secondary">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

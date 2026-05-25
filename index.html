@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIA | Sanctuary of Modern Living</title>
+  <!-- Design reference: assets/images/home.png -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home" data-page="home">
+
+  <header class="site-header glass-nav">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsWQJ4LfV6KeynLrmRi1Mh4S8yev6UKbMcnjBLaTZb8Ex5OpVQ1bAYz0btNkTrmzrbglJGG82WTC2T6C90AgqR48jE1rO-CsHLHUtW8YPwlESqrxLBk56qS8M8Fo4eehD6vpTJ0cAIjMs3miVakouZtY8hGtfVDk2WFyMOpGwCtUmrfDaPiHftYKju4l0FxLGeGuR8ImIFNaVjyN3kMwCFmHuKITf-GtZ2VrYCvzfnOQk9eGCpbxHyxg__RkbvwW-iEK5dJ5FicBw1" alt="ESSENTIA Logo" width="40" height="40">
+        <span class="nav-brand">ESSENTIA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link is-active">HOME</a>
+        <a href="About.html" class="nav-link">COLLECTION</a>
+        <a href="Amenities.html" class="nav-link">WELLNESS</a>
+        <a href="contanct.html" class="btn btn-primary nav-cta">BOOK VISIT</a>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined icon-md">menu</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel" id="drawer-panel">
+      <div>
+        <div class="flex justify-between items-center" style="margin-bottom: 48px;">
+          <a href="index.html" class="nav-logo nav-logo--sm">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsWQJ4LfV6KeynLrmRi1Mh4S8yev6UKbMcnjBLaTZb8Ex5OpVQ1bAYz0btNkTrmzrbglJGG82WTC2T6C90AgqR48jE1rO-CsHLHUtW8YPwlESqrxLBk56qS8M8Fo4eehD6vpTJ0cAIjMs3miVakouZtY8hGtfVDk2WFyMOpGwCtUmrfDaPiHftYKju4l0FxLGeGuR8ImIFNaVjyN3kMwCFmHuKITf-GtZ2VrYCvzfnOQk9eGCpbxHyxg__RkbvwW-iEK5dJ5FicBw1" alt="ESSENTIA Logo" width="32" height="32">
+            <span class="nav-brand nav-brand--sm">ESSENTIA</span>
+          </a>
+          <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+            <span class="material-symbols-outlined icon-md">close</span>
+          </button>
+        </div>
+        <nav class="drawer-nav" aria-label="Mobile navigation">
+          <a href="index.html" class="nav-link is-active">HOME</a>
+          <a href="About.html" class="nav-link">COLLECTION</a>
+          <a href="Amenities.html" class="nav-link">WELLNESS</a>
+          <a href="contanct.html" class="nav-link">CONTACT</a>
+        </nav>
+      </div>
+      <a href="contanct.html" class="btn btn-primary" style="width:100%; padding: 16px;">BOOK VISIT</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <div class="hero__overlay"></div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuASU8JGgFR69agzhO9rtvRduzBIEsU5jsIxnVuHIArqmb6YQhzIIquTntXlELDC4C1H1W6ZhxUw0NITXGjl_JDUyqNoTqrx8QexPhus6ozdoMyC-uz-7jK6CzCUQCyb1iqfR0oProIqP9LRaLolwv0HvgqdGtv3fCluog3a9LfyGuh5lyolvQsd8fdEfC0LBfnSz3HW5GWKGfdgasVuIvj-ngIkN--BMDTD6D0teqUdlhu19fDRzUaynl7FeSlWSCAjZFoxuP9fm5pP" alt="Hero background — luxury sanctuary landscape">
+      </div>
+      <div class="hero__content">
+        <span class="hero__eyebrow text-label animate-fade-in">A SANCTUARY AWAITS</span>
+        <h1 class="hero__title text-display-lg">
+          ESSENTIA<br>
+          <span class="italic font-normal">Where Modern Living Meets Nature</span>
+        </h1>
+        <p class="hero__subtitle text-body-lg">Discover a curated landscape of serenity and sophistication, designed for the few who seek quiet luxury and architectural perfection.</p>
+        <div class="hero__actions">
+          <button type="button" class="btn btn-white">EXPLORE MASTERPLAN</button>
+          <button type="button" class="btn btn-outline-white">BOOK SITE VISIT</button>
+        </div>
+      </div>
+      <div class="hero__scroll animate-bounce" aria-hidden="true">
+        <span class="text-caption tracking-widest">SCROLL</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+    </section>
+
+    <section class="bento-section section container" aria-labelledby="pillars-heading">
+      <header class="section-header">
+        <h2 id="pillars-heading" class="text-headline-lg text-primary">The Pillars of Essentia</h2>
+        <p class="text-body-md text-muted">Experience a life where every detail is meticulously crafted to harmonize with the natural environment.</p>
+      </header>
+      <div class="bento-grid">
+        <article class="bento-card bento-card--light bento-card--wide-7">
+          <div>
+            <span class="material-symbols-outlined icon-xl text-gold" style="margin-bottom: 24px;">eco</span>
+            <h3 class="text-headline-md text-primary" style="margin-bottom: 16px;">Organic Integration</h3>
+            <p class="text-body-md text-muted" style="max-width: 28rem;">Our architecture flows with the natural contours of the landscape, preserving existing flora while introducing sustainable innovations.</p>
+          </div>
+          <div class="bento-card__img-wrap">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZbOc7uHH3lGmb_LHCVIO8OTyUzAnShj3dXqzzJc0M-k72_Pfm5tBKvOKVqpLfFjzyqtIC4WBlSH6fuBWg7HxmijC3wRKvhey_SDXRDMUervQVgxRPM31VngGYj3Zog3d8llMBp_QBg3Gy5sV97NCu4pkTFW4MtxKdDxd09uePEMMe4J55VvQPvND7b9-ZHdv3XWTkEZqloSqHMBmu3lJFNjif52DVSrXWCEBqwenMlFYJQRzRGqXawSUf6bVoudTFPHqtzP2IbuoM" alt="Luxurious interior blending with outdoor garden">
+          </div>
+        </article>
+        <article class="bento-card bento-card--dark bento-card--wide-5">
+          <div>
+            <span class="material-symbols-outlined icon-xl" style="color: var(--tertiary-fixed-dim); margin-bottom: 24px;">health_and_safety</span>
+            <h3 class="text-headline-md" style="margin-bottom: 16px;">Wellness Concentric</h3>
+            <p class="text-body-md">From dedicated meditation groves to state-of-the-art restorative spa facilities, wellness is the heartbeat of our sanctuary.</p>
+          </div>
+          <ul class="bento-card__list">
+            <li><span class="material-symbols-outlined" style="color: var(--tertiary-fixed-dim);">check_circle</span><span class="text-label">Zen Meditation Pavilions</span></li>
+            <li><span class="material-symbols-outlined" style="color: var(--tertiary-fixed-dim);">check_circle</span><span class="text-label">Organic Farm-to-Table Hub</span></li>
+            <li><span class="material-symbols-outlined" style="color: var(--tertiary-fixed-dim);">check_circle</span><span class="text-label">Air-Purifying Landscape Design</span></li>
+          </ul>
+        </article>
+        <article class="bento-wide glass-card">
+          <div class="bento-wide__inner">
+            <div class="bento-wide__text">
+              <h3 class="text-headline-lg text-primary" style="margin-bottom: 24px;">Smart Estate Intelligence</h3>
+              <p class="text-body-lg text-muted" style="margin-bottom: 32px;">Seamless technology integrated into nature. Manage your property's energy, security, and services through our bespoke resident application.</p>
+              <button type="button" class="btn btn-primary">VIEW TECH SPECS</button>
+            </div>
+            <div class="bento-wide__visual">
+              <div class="bento-wide__hub">
+                <span class="material-symbols-outlined">hub</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-wide__blob" aria-hidden="true"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey-section section" aria-labelledby="journey-heading">
+      <div class="journey-inner">
+        <h2 id="journey-heading" class="text-headline-lg text-primary">Personalize Your Journey</h2>
+        <div class="toggle-pill">
+          <button type="button" class="toggle-btn is-active" id="exp-btn">Experience View</button>
+          <button type="button" class="toggle-btn" id="inv-btn">Investor View</button>
+        </div>
+        <div class="toggle-content" id="toggle-content">
+          <div id="view-experience">
+            <div class="journey-image">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCH2PQ9jzLX0XRAtn0mAxY_HBPbM6xdHiHc68F2ug2b5yYJjSbKtRVKoM-B9hdnBjgIcwFLKcVdeMqa_ptIETlCkOUDz6aEuEUZ0l8t9nUvKuiGX8kY-xsuH4srX27c00coRV6BawulXW0SBkkjoeoU1Etu8IHhiUB6uggyjEYPG9Ykh85gmJxSXvRRoAYiYzCbIiMgy7AT29q99ZF2Rbu-CfQzNCbO22QDmQ8wIbHbgOLw5r6K06YYk6JxZIyGkNjEf8-DdKCc85u" alt="Luxury villa at sunset">
+            </div>
+            <p class="journey-quote text-muted">"A morning mist rolling over the meditation deck, the sound of water, and the scent of wild jasmine."</p>
+          </div>
+          <div id="view-investor" class="is-hidden">
+            <div class="stats-grid">
+              <div class="stat-card"><span class="stat-card__value">18%</span><span class="stat-card__label">Proj. Annual Growth</span></div>
+              <div class="stat-card"><span class="stat-card__value">40%</span><span class="stat-card__label">Green Coverage</span></div>
+              <div class="stat-card"><span class="stat-card__value">350</span><span class="stat-card__label">Total Acreage</span></div>
+              <div class="stat-card"><span class="stat-card__value">Elite</span><span class="stat-card__label">Community Tier</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid grid grid-footer">
+      <div>
+        <div class="nav-logo" style="margin-bottom: 24px;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsWQJ4LfV6KeynLrmRi1Mh4S8yev6UKbMcnjBLaTZb8Ex5OpVQ1bAYz0btNkTrmzrbglJGG82WTC2T6C90AgqR48jE1rO-CsHLHUtW8YPwlESqrxLBk56qS8M8Fo4eehD6vpTJ0cAIjMs3miVakouZtY8hGtfVDk2WFyMOpGwCtUmrfDaPiHftYKju4l0FxLGeGuR8ImIFNaVjyN3kMwCFmHuKITf-GtZ2VrYCvzfnOQk9eGCpbxHyxg__RkbvwW-iEK5dJ5FicBw1" alt="ESSENTIA Logo" width="32" height="32" style="opacity:0.8;">
+          <span class="text-headline-md text-primary">ESSENTIA</span>
+        </div>
+        <p class="text-body-md text-secondary">Crafting modern sanctuaries that harmonize high-end architecture with raw natural beauty.</p>
+      </div>
+      <div>
+        <h4 class="text-label text-primary" style="margin-bottom: 16px;">THE ESTATE</h4>
+        <nav class="flex flex-col gap-2">
+          <a href="About.html" class="text-body-md text-secondary">The Collection</a>
+          <a href="Amenities.html" class="text-body-md text-secondary">Wellness Centers</a>
+          <a href="About.html" class="text-body-md text-secondary">Sustainability</a>
+        </nav>
+      </div>
+      <div>
+        <h4 class="text-label text-primary" style="margin-bottom: 16px;">OPPORTUNITIES</h4>
+        <nav class="flex flex-col gap-2">
+          <a href="About.html" class="text-body-md text-secondary">Investment Models</a>
+          <a href="About.html" class="text-body-md text-secondary">Owner Benefits</a>
+          <a href="contanct.html" class="text-body-md text-secondary">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4 class="text-label text-primary" style="margin-bottom: 16px;">STAY UPDATED</h4>
+        <div class="footer-input-wrap">
+          <input type="email" class="footer-input" placeholder="Email Address" aria-label="Email Address">
+          <button type="button" class="footer-input-btn" aria-label="Subscribe"><span class="material-symbols-outlined">arrow_forward</span></button>
+        </div>
+        <div class="flex gap-4" style="margin-top: 16px;">
+          <a href="#" aria-label="Website"><span class="material-symbols-outlined text-secondary">language</span></a>
+          <a href="#" aria-label="Share"><span class="material-symbols-outlined text-secondary">share</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p class="text-body-md text-secondary" style="opacity:0.6;">© 2024 ESSENTIA Sanctuary. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
