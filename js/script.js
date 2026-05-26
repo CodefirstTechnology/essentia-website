@@ -13,6 +13,105 @@
   if (page === "amenities") initAmenities();
   if (page === "contact") initContact();
 
+  /* ----- Toast notifications (reusable) ----- */
+  var toastDismissTimer = null;
+  var activeToastEl = null;
+
+  function getToastContainer() {
+    var container = document.getElementById("toast-container");
+    if (!container) {
+      container = document.createElement("div");
+      container.id = "toast-container";
+      container.className = "toast-container";
+      container.setAttribute("aria-live", "polite");
+      container.setAttribute("aria-atomic", "true");
+      document.body.appendChild(container);
+    }
+    return container;
+  }
+
+  function dismissToast(toast) {
+    if (!toast) return;
+
+    toast.classList.remove("is-visible");
+    toast.classList.add("is-hiding");
+
+    setTimeout(function () {
+      if (toast.parentNode) {
+        toast.parentNode.removeChild(toast);
+      }
+      if (activeToastEl === toast) {
+        activeToastEl = null;
+      }
+    }, 350);
+  }
+
+  /**
+   * @param {"success"|"error"} type
+   * @param {string} message - Use \\n for line breaks
+   * @param {string} [title] - Defaults to Success / Error
+   */
+  window.showToast = function (type, message, title) {
+    var titles = { success: "Success", error: "Error" };
+    var toastTitle = title || titles[type] || "";
+    var iconName = type === "success" ? "check_circle" : "error";
+    var duration = 4500;
+
+    if (activeToastEl) {
+      dismissToast(activeToastEl);
+    }
+
+    if (toastDismissTimer) {
+      clearTimeout(toastDismissTimer);
+      toastDismissTimer = null;
+    }
+
+    var toast = document.createElement("div");
+    toast.className = "toast toast--" + type;
+    toast.setAttribute("role", "alert");
+
+    var iconWrap = document.createElement("div");
+    iconWrap.className = "toast__icon-wrap";
+    iconWrap.innerHTML =
+      '<span class="material-symbols-outlined">' + iconName + "</span>";
+
+    var content = document.createElement("div");
+    content.className = "toast__content";
+
+    var titleEl = document.createElement("p");
+    titleEl.className = "toast__title";
+    titleEl.textContent = toastTitle;
+
+    var messageWrap = document.createElement("div");
+    messageWrap.className = "toast__message";
+    message.split("\n").forEach(function (line) {
+      if (!line.trim()) return;
+      var lineEl = document.createElement("p");
+      lineEl.className = "toast__message-line";
+      lineEl.textContent = line.trim();
+      messageWrap.appendChild(lineEl);
+    });
+
+    content.appendChild(titleEl);
+    content.appendChild(messageWrap);
+    toast.appendChild(iconWrap);
+    toast.appendChild(content);
+
+    getToastContainer().appendChild(toast);
+    activeToastEl = toast;
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        toast.classList.add("is-visible");
+      });
+    });
+
+    toastDismissTimer = setTimeout(function () {
+      dismissToast(toast);
+      toastDismissTimer = null;
+    }, duration);
+  };
+
   /* ----- Mobile navigation ----- */
   function initMobileNav() {
     var drawer = document.getElementById("mobile-drawer");
@@ -177,6 +276,21 @@
 
   /* ----- Contact ----- */
   function initContact() {
+    var whatsappBtn = document.querySelector(".btn-whatsapp");
+    var callBtn = document.querySelector(".btn-call");
+
+    if (whatsappBtn) {
+      whatsappBtn.addEventListener("click", function () {
+        window.open("https://wa.me/918668227747", "_blank", "noopener,noreferrer");
+      });
+    }
+
+    if (callBtn) {
+      callBtn.addEventListener("click", function () {
+        window.location.href = "tel:+918668227747";
+      });
+    }
+
     var inputs = document.querySelectorAll(".form-input");
     inputs.forEach(function (input) {
       input.addEventListener("focus", function () {
@@ -190,5 +304,132 @@
         }
       });
     });
+
+    initInquiryForm();
+  }
+
+  function initInquiryForm() {
+    var SENDMAIL_URL = "sendmail.php";
+
+    var form = document.getElementById("inquiry-form");
+    var feedback = document.getElementById("form-feedback");
+    var submitBtn = document.getElementById("submit-inquiry");
+    var fullNameInput = document.getElementById("fullname");
+    var emailInput = document.getElementById("email");
+    var phoneInput = document.getElementById("phone");
+    var interestInput = document.getElementById("interest");
+
+    if (!form) return;
+
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var isSubmitting = false;
+
+    if (phoneInput) {
+      phoneInput.addEventListener("input", function () {
+        phoneInput.value = phoneInput.value.replace(/\D/g, "");
+      });
+    }
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      if (isSubmitting) return;
+
+      clearFieldErrors();
+      hideFeedback();
+
+      var fullName = fullNameInput ? fullNameInput.value.trim() : "";
+      var email = emailInput ? emailInput.value.trim() : "";
+      var phone = phoneInput ? phoneInput.value.trim() : "";
+      var interest = interestInput ? interestInput.value.trim() : "";
+      var isValid = true;
+
+      if (!fullName) {
+        markInvalid(fullNameInput);
+        isValid = false;
+      }
+
+      if (!email || !emailPattern.test(email)) {
+        markInvalid(emailInput);
+        isValid = false;
+      }
+
+      if (!phone || phone.length < 10) {
+        markInvalid(phoneInput);
+        isValid = false;
+      }
+
+      if (!interest) {
+        markInvalid(interestInput);
+        isValid = false;
+      }
+
+      if (!isValid) {
+        showToast(
+          "error",
+          "Please complete all fields correctly. Email must be valid and phone must contain at least 10 digits."
+        );
+        return;
+      }
+
+      isSubmitting = true;
+      setSubmitting(true);
+
+      var formData = new FormData();
+      formData.append("full_name", fullName);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("interest", interest);
+
+      try {
+        var response = await fetch(SENDMAIL_URL, {
+          method: "POST",
+          body: formData
+        });
+
+        var result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "Send failed");
+        }
+
+        form.reset();
+        if (interestInput) {
+          interestInput.selectedIndex = 0;
+        }
+        clearFieldErrors();
+        showToast(
+          "success",
+          "Thank you for your inquiry.\nOur team will contact you shortly."
+        );
+      } catch (err) {
+        showToast("error", "Something went wrong. Please try again.");
+      } finally {
+        isSubmitting = false;
+        setSubmitting(false);
+      }
+    });
+
+    function markInvalid(field) {
+      if (field) field.classList.add("is-invalid");
+    }
+
+    function clearFieldErrors() {
+      form.querySelectorAll(".form-input").forEach(function (field) {
+        field.classList.remove("is-invalid");
+      });
+    }
+
+    function hideFeedback() {
+      if (!feedback) return;
+      feedback.textContent = "";
+      feedback.className = "form-feedback is-hidden";
+    }
+
+    function setSubmitting(submitting) {
+      if (!submitBtn) return;
+      submitBtn.disabled = submitting;
+      submitBtn.textContent = submitting ? "Sending..." : "Submit Inquiry";
+    }
   }
 })();

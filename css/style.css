@@ -462,11 +462,31 @@ ul {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  flex-shrink: 0;
+  display: block;
 }
 
 .nav-logo--sm img {
   width: 32px;
   height: 32px;
+}
+
+/* Home page — larger transparent logo in navbar only */
+.page-home .nav-inner > .nav-logo--home img {
+  width: 56px;
+  height: 56px;
+}
+
+.page-home .mobile-drawer .nav-logo--home img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .page-home .nav-inner > .nav-logo--home img {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .nav-brand {
@@ -697,6 +717,148 @@ ul {
   bottom: 12px;
   pointer-events: none;
   color: var(--outline);
+}
+
+.form-feedback {
+  font-size: var(--text-body-md);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+}
+
+.form-feedback--success {
+  color: var(--on-primary-fixed);
+  background-color: var(--primary-fixed);
+}
+
+.form-feedback--error {
+  color: var(--error);
+  background-color: var(--error-container);
+}
+
+.form-input.is-invalid {
+  border-bottom-color: var(--error);
+}
+
+.btn-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* --- Toast notifications (inquiry form) --- */
+.toast-container {
+  position: fixed;
+  z-index: 10000;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+  max-width: calc(100% - 48px);
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 300px;
+  max-width: 380px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 20px 40px rgba(26, 48, 38, 0.12);
+  opacity: 0;
+  transform: translateX(110%) translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.toast.is-hiding {
+  opacity: 0;
+  transform: translateX(110%) translateY(-8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.toast__icon-wrap {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast--success .toast__icon-wrap {
+  background-color: var(--primary-fixed);
+  color: var(--primary);
+}
+
+.toast--error .toast__icon-wrap {
+  background-color: var(--error-container);
+  color: var(--error);
+}
+
+.toast__icon-wrap .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.toast__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast__title {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.toast__message {
+  font-size: var(--text-body-md);
+  line-height: 1.55;
+  color: var(--on-surface-variant);
+}
+
+.toast__message-line + .toast__message-line {
+  margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+  .toast-container {
+    left: 24px;
+    right: 24px;
+    align-items: center;
+  }
+
+  .toast {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    transform: translateY(-24px);
+  }
+
+  .toast.is-visible {
+    transform: translateY(0);
+  }
+
+  .toast.is-hiding {
+    transform: translateY(-16px);
+  }
 }
 
 /* --- Toggle (Experience / Investor) --- */
