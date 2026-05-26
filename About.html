@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page-about" data-page="about">
 
   <header class="site-header glass-nav">
     <nav class="nav-inner" aria-label="Main navigation">
-      <a href="index.html" class="nav-logo">
-        <span class="material-symbols-outlined icon-md text-primary">spa</span>
-        <span class="nav-brand text-headline-md" style="font-size: var(--text-headline-md);">ESSENTIA</span>
+     <a href="index.html" class="nav-logo nav-logo--home">
+        <img src="./assets/icons/logo.png" alt="ESSENTIA Logo">
+      
       </a>
       <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="About.html" class="nav-link is-active">About</a>
-        <a href="Amenities.html" class="nav-link">Wellness</a>
+        <a href="Amenities.html" class="nav-link">Amenities</a>
         <a href="contanct.html" class="nav-link">Contact</a>
         <a href="contanct.html" class="btn btn-primary nav-cta">BOOK VISIT</a>
       </div>
@@ -37,10 +37,10 @@
     <div class="drawer-panel" id="drawer-panel">
       <div>
         <div class="flex justify-between items-center" style="margin-bottom: 48px;">
-          <a href="index.html" class="nav-logo">
-            <span class="material-symbols-outlined icon-md text-primary">spa</span>
-            <span class="nav-brand nav-brand--sm">ESSENTIA</span>
-          </a>
+          <a href="index.html" class="nav-logo nav-logo--home">
+        <img src="./assets/icons/logo.png" alt="ESSENTIA Logo">
+      
+      </a>
           <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
             <span class="material-symbols-outlined icon-md">close</span>
           </button>
@@ -178,49 +178,56 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid grid grid-footer">
-      <div class="flex flex-col gap-6">
-        <div class="nav-logo">
-          <span class="material-symbols-outlined icon-sm text-primary">spa</span>
-          <span class="text-headline-md text-primary">ESSENTIA</span>
-        </div>
-        <p class="text-body-md text-secondary">Crafting extraordinary spaces that honor nature and elevate the human experience.</p>
+<footer class="site-footer" style="background-color: #e5e0dd;">
+  <div class="container grid" style="grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; padding-top: 80px; padding-bottom: 80px; align-items: flex-start;">
+    
+    <div>
+      <div class="nav-logo" style="margin-bottom: 24px;">
+        <img src="assets/icons/logo.png" alt="ESSENTIA Logo" width="60" height="60" style="opacity:0.8;">
       </div>
-      <div>
-        <h5 class="text-label text-primary">Navigation</h5>
-        <nav class="flex flex-col gap-2" style="margin-top: 16px;">
-          <a href="index.html" class="text-body-md text-secondary">The Collection</a>
-          <a href="Amenities.html" class="text-body-md text-secondary">Wellness</a>
-          <a href="About.html" class="text-body-md text-secondary">Sustainability</a>
-        </nav>
-      </div>
-      <div>
-        <h5 class="text-label text-primary">Investors</h5>
-        <nav class="flex flex-col gap-2" style="margin-top: 16px;">
-          <a href="#" class="text-body-md text-secondary">Investment Portal</a>
-          <a href="#" class="text-body-md text-secondary">Annual Report</a>
-          <a href="#" class="text-body-md text-secondary">Strategic Partners</a>
-        </nav>
-      </div>
-      <div>
-        <h5 class="text-label text-primary">Newsletter</h5>
-        <p class="text-caption text-secondary" style="margin: 16px 0;">Join our inner circle for exclusive previews.</p>
-        <div class="footer-input-wrap">
-          <input type="email" class="footer-input" placeholder="Email Address" aria-label="Email">
-          <button type="button" class="footer-input-btn"><span class="material-symbols-outlined">arrow_right_alt</span></button>
-        </div>
+      <p class="text-body-md text-secondary" style="margin-bottom: 32px; max-width: 280px; line-height: 1.6;">
+        Building legacies through architectural excellence and environmental stewardship.
+      </p>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary" style="cursor:pointer;">public</span>
+        <span class="material-symbols-outlined text-primary" style="cursor:pointer;">share</span>
+        <span class="material-symbols-outlined text-primary" style="cursor:pointer;">mail</span>
       </div>
     </div>
-    <div class="container footer-bottom footer-bottom--flex">
-      <p class="text-caption text-secondary">© 2024 ESSENTIA Sanctuary. All rights reserved.</p>
-      <div class="flex gap-6">
-        <a href="#" class="text-caption text-secondary">Privacy Policy</a>
-        <a href="#" class="text-caption text-secondary">Terms of Service</a>
-      </div>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="flex flex-col gap-4">
+      <h5 class="text-label text-primary" style="margin-bottom: 8px; letter-spacing: 0.1em;">EXPLORE</h5>
+      <a href="index.html" class="text-body-md text-secondary" style="text-decoration: none;">The Collection</a>
+      <a href="Amenities.html" class="text-body-md text-primary font-semibold" style="text-decoration: none;">Amenities</a>
+      <a href="About.html" class="text-body-md text-secondary" style="text-decoration: none;">Sustainability</a>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <h5 class="text-label text-primary" style="margin-bottom: 8px; letter-spacing: 0.1em;">RESOURCES</h5>
+      <a href="#" class="text-body-md text-secondary" style="text-decoration: none;">Investment Guide</a>
+      <a href="#" class="text-body-md text-secondary" style="text-decoration: none;">Masterplan PDF</a>
+      <a href="#" class="text-body-md text-secondary" style="text-decoration: none;">Media Kit</a>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <h5 class="text-label text-primary" style="margin-bottom: 8px; letter-spacing: 0.1em;">CONTACT</h5>
+      <p class="text-body-md text-secondary" style="margin: 0; line-height: 1.6;">The Esplanade 404, Sanctuary District, GC 90210</p>
+      <p class="text-body-md text-secondary" style="margin: 0;">+1 800-ESS-NTIA</p>
+    </div>
+
+  </div>
+
+  <div style="border-top: 1px solid rgba(0, 0, 0, 0.08); width: 100%;"></div>
+
+  <div class="container footer-bottom footer-bottom--flex" style="display: flex; justify-content: space-between; align-items: center; padding-top: 32px; padding-bottom: 32px;">
+    <span class="text-body-md text-secondary">© 2026 ESSENTIA Sanctuary. All rights reserved.</span>
+    <div class="flex gap-8">
+      <a href="#" class="text-caption text-secondary" style="text-decoration: none;">Privacy Policy</a>
+      <a href="#" class="text-caption text-secondary" style="text-decoration: none;">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
