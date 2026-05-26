@@ -267,7 +267,7 @@ ul {
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: var(--shadow-nav);
@@ -450,23 +450,49 @@ ul {
   max-width: var(--container-max);
   margin: 0 auto;
   transition: padding var(--transition);
+   height: 104px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 12px;
+    height: 100%;
 }
 
+  
+
 .nav-logo img {
-  width: 40px;
-  height: 40px;
+  height: 104px !important; /* Matches navbar total height */
+    width: auto !important;   /* Keeps aspect ratio */
   object-fit: contain;
+  flex-shrink: 0;
+  display: block;
 }
 
 .nav-logo--sm img {
   width: 32px;
   height: 32px;
+}
+
+/* Home page — larger transparent logo in navbar only */
+.page-home .nav-inner > .nav-logo--home img {
+  width: 56px;
+  height: 56px;
+}
+
+.page-home .mobile-drawer .nav-logo--home img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .page-home .nav-inner > .nav-logo--home img {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .nav-brand {
@@ -585,59 +611,69 @@ ul {
 }
 
 /* --- Footer --- */
+/* Base site footer configuration */
 .site-footer {
-  background-color: var(--surface-container-highest);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  width: 100%;
+  background-color: #fff; /* Matches your background palette */
 }
 
-.site-footer--dark {
-  background-color: var(--primary-container);
+/* 4-Column Header Grid Configuration */
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr); /* Gives the logo text extra width */
+  gap: 40px;
+  align-items: flex-start; /* Ensures columns align perfectly along the top line */
 }
 
-.footer-grid {
-  padding-top: var(--section-gap-md);
-  padding-bottom: var(--section-gap-md);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(194, 200, 195, 0.3);
-  padding: 32px var(--margin-mobile);
-  text-align: center;
-}
-
-.footer-bottom--flex {
+/* Utilities mapping to your layout classes */
+.flex {
   display: flex;
+}
+
+.flex-col {
   flex-direction: column;
-  align-items: center;
+}
+
+.gap-4 {
   gap: 16px;
 }
 
-.footer-input-wrap {
-  position: relative;
+.gap-8 {
+  gap: 32px;
 }
 
-.footer-input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--outline-variant);
-  padding: 8px 32px 8px 0;
-  outline: none;
+/* Bottom Row Alignment */
+.footer-bottom--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08); /* Clean dividers line */
 }
 
-.footer-input:focus {
-  border-bottom-color: var(--on-tertiary-container);
+/* Typography Overrides to remove default margins */
+.text-label {
+  margin: 0 0 8px 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
 }
 
-.footer-input-btn {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--primary);
-  cursor: pointer;
+.grid-footer a {
+  text-decoration: none;
+}
+
+/* Mobile Responsiveness Layout adjustment */
+@media (max-width: 768px) {
+  .grid-footer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom--flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 /* --- Forms --- */
@@ -697,6 +733,148 @@ ul {
   bottom: 12px;
   pointer-events: none;
   color: var(--outline);
+}
+
+.form-feedback {
+  font-size: var(--text-body-md);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+}
+
+.form-feedback--success {
+  color: var(--on-primary-fixed);
+  background-color: var(--primary-fixed);
+}
+
+.form-feedback--error {
+  color: var(--error);
+  background-color: var(--error-container);
+}
+
+.form-input.is-invalid {
+  border-bottom-color: var(--error);
+}
+
+.btn-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* --- Toast notifications (inquiry form) --- */
+.toast-container {
+  position: fixed;
+  z-index: 10000;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+  max-width: calc(100% - 48px);
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 300px;
+  max-width: 380px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 20px 40px rgba(26, 48, 38, 0.12);
+  opacity: 0;
+  transform: translateX(110%) translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.toast.is-hiding {
+  opacity: 0;
+  transform: translateX(110%) translateY(-8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.toast__icon-wrap {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast--success .toast__icon-wrap {
+  background-color: var(--primary-fixed);
+  color: var(--primary);
+}
+
+.toast--error .toast__icon-wrap {
+  background-color: var(--error-container);
+  color: var(--error);
+}
+
+.toast__icon-wrap .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.toast__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast__title {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.toast__message {
+  font-size: var(--text-body-md);
+  line-height: 1.55;
+  color: var(--on-surface-variant);
+}
+
+.toast__message-line + .toast__message-line {
+  margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+  .toast-container {
+    left: 24px;
+    right: 24px;
+    align-items: center;
+  }
+
+  .toast {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    transform: translateY(-24px);
+  }
+
+  .toast.is-visible {
+    transform: translateY(0);
+  }
+
+  .toast.is-hiding {
+    transform: translateY(-16px);
+  }
 }
 
 /* --- Toggle (Experience / Investor) --- */

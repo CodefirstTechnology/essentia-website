@@ -9,19 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page-contact" data-page="contact">
 
   <header class="site-header glass-nav">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="index.html" class="nav-logo text-primary">
-        <span class="material-symbols-outlined icon-lg">spa</span>
-        <span class="nav-brand nav-brand--contact">ESSENTIA</span>
+       <img src="./assets/icons/logo.png" alt="ESSENTIA Logo">
       </a>
       <div class="nav-links">
         <a href="index.html" class="nav-link">THE COLLECTION</a>
-        <a href="Amenities.html" class="nav-link">WELLNESS</a>
+        <a href="Amenities.html" class="nav-link">Amenities</a>
         <a href="contanct.html" class="nav-link is-active">CONTACT</a>
         <a href="contanct.html" class="btn btn-primary nav-cta" style="letter-spacing: 0.1em;">BOOK VISIT</a>
       </div>
@@ -37,8 +36,7 @@
       <div>
         <div class="flex justify-between items-center" style="margin-bottom: 48px;">
           <a href="index.html" class="nav-logo text-primary">
-            <span class="material-symbols-outlined icon-lg">spa</span>
-            <span class="nav-brand nav-brand--sm">ESSENTIA</span>
+          <img src="./assets/icons/logo.png" alt="ESSENTIA Logo">
           </a>
           <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
             <span class="material-symbols-outlined icon-md">close</span>
@@ -73,30 +71,31 @@
       </div>
       <div class="contact-form-col">
         <div class="form-card glass-card">
-          <form action="#" method="post">
+          <form id="inquiry-form" novalidate>
+            <div id="form-feedback" class="form-feedback is-hidden" role="status" aria-live="polite"></div>
             <div class="form-group">
               <label for="fullname">FULL NAME</label>
-              <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Enter your name">
+              <input type="text" id="fullname" name="full_name" class="form-input" placeholder="Enter your name" autocomplete="name" required>
             </div>
             <div class="form-group">
               <label for="email">EMAIL ADDRESS</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="email@sanctuary.com">
+              <input type="email" id="email" name="email" class="form-input" placeholder="email@sanctuary.com" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="phone">PHONE NUMBER</label>
-              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" inputmode="numeric" autocomplete="tel" required>
             </div>
             <div class="form-group form-select-wrap">
               <label for="interest">INTEREST</label>
-              <select id="interest" name="interest" class="form-input form-select">
-                <option>Private Villa Selection</option>
-                <option>Investment Opportunities</option>
-                <option>Wellness Retreat Booking</option>
-                <option>Sustainability Partnerships</option>
+              <select id="interest" name="interest" class="form-input form-select" required>
+                <option value="Private Villa Selection">Private Villa Selection</option>
+                <option value="Investment Opportunities">Investment Opportunities</option>
+                <option value="Wellness Retreat Booking">Wellness Retreat Booking</option>
+                <option value="Sustainability Partnerships">Sustainability Partnerships</option>
               </select>
               <span class="material-symbols-outlined select-arrow">expand_more</span>
             </div>
-            <button type="submit" class="btn-submit">Submit Inquiry</button>
+            <button type="submit" class="btn-submit" id="submit-inquiry">Submit Inquiry</button>
           </form>
         </div>
       </div>
@@ -138,45 +137,56 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid grid grid-footer">
-      <div>
-        <div class="nav-logo" style="margin-bottom: 32px;">
-          <span class="material-symbols-outlined icon-md text-primary">spa</span>
-          <span class="text-headline-md text-primary">ESSENTIA</span>
-        </div>
-        <p class="text-body-md text-secondary">Crafting sanctuaries that harmonize modern architectural precision with the timeless serenity of the natural world.</p>
+ <footer class="site-footer" style="background-color: #e5e0dd;">
+  <div class="container grid" style="grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; padding-top: 80px; padding-bottom: 80px; align-items: flex-start;">
+    
+    <div>
+      <div class="nav-logo" style="margin-bottom: 24px;">
+        <img src="assets/icons/logo.png" alt="ESSENTIA Logo" width="60" height="60" style="opacity:0.8;">
       </div>
-      <div class="flex flex-col gap-4">
-        <h4 class="text-label text-primary uppercase tracking-widest">Explore</h4>
-        <a href="index.html" class="text-body-md text-secondary">The Collection</a>
-        <a href="Amenities.html" class="text-body-md text-secondary">Wellness</a>
-        <a href="About.html" class="text-body-md text-secondary">Sustainability</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h4 class="text-label text-primary uppercase tracking-widest">Information</h4>
-        <a href="About.html" class="text-body-md text-secondary">Investment</a>
-        <a href="contanct.html" class="text-body-md text-primary font-semibold">Contact</a>
-        <a href="#" class="text-body-md text-secondary">Privacy Policy</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <h4 class="text-label text-primary uppercase tracking-widest">Connect</h4>
-        <p class="text-body-md text-secondary">Suite 405, Sanctuary Plaza<br>The Estates, SC 29401</p>
-        <div class="flex gap-4" style="margin-top: 16px;">
-          <span class="material-symbols-outlined text-secondary" style="cursor:pointer; opacity:0.8;">public</span>
-          <span class="material-symbols-outlined text-secondary" style="cursor:pointer; opacity:0.8;">mail</span>
-        </div>
+      <p class="text-body-md text-secondary" style="margin-bottom: 32px; max-width: 280px; line-height: 1.6;">
+        Building legacies through architectural excellence and environmental stewardship.
+      </p>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary" style="cursor:pointer;">public</span>
+        <span class="material-symbols-outlined text-primary" style="cursor:pointer;">share</span>
+        <span class="material-symbols-outlined text-primary" style="cursor:pointer;">mail</span>
       </div>
     </div>
-    <div class="container footer-bottom footer-bottom--flex">
-      <p class="text-body-md text-muted text-caption">© 2024 ESSENTIA Sanctuary. All rights reserved.</p>
-      <div class="flex gap-8">
-        <span class="text-caption text-secondary">INSTAGRAM</span>
-        <span class="text-caption text-secondary">LINKEDIN</span>
-      </div>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="flex flex-col gap-4">
+      <h5 class="text-label text-primary" style="margin-bottom: 8px; letter-spacing: 0.1em;">EXPLORE</h5>
+      <a href="index.html" class="text-body-md text-secondary" style="text-decoration: none;">The Collection</a>
+      <a href="Amenities.html" class="text-body-md text-primary font-semibold" style="text-decoration: none;">Amenities</a>
+      <a href="About.html" class="text-body-md text-secondary" style="text-decoration: none;">Sustainability</a>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <h5 class="text-label text-primary" style="margin-bottom: 8px; letter-spacing: 0.1em;">RESOURCES</h5>
+      <a href="#" class="text-body-md text-secondary" style="text-decoration: none;">Investment Guide</a>
+      <a href="#" class="text-body-md text-secondary" style="text-decoration: none;">Masterplan PDF</a>
+      <a href="#" class="text-body-md text-secondary" style="text-decoration: none;">Media Kit</a>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <h5 class="text-label text-primary" style="margin-bottom: 8px; letter-spacing: 0.1em;">CONTACT</h5>
+      <p class="text-body-md text-secondary" style="margin: 0; line-height: 1.6;">The Esplanade 404, Sanctuary District, GC 90210</p>
+      <p class="text-body-md text-secondary" style="margin: 0;">+1 800-ESS-NTIA</p>
+    </div>
+
+  </div>
+
+  <div style="border-top: 1px solid rgba(0, 0, 0, 0.08); width: 100%;"></div>
+
+  <div class="container footer-bottom footer-bottom--flex" style="display: flex; justify-content: space-between; align-items: center; padding-top: 32px; padding-bottom: 32px;">
+    <span class="text-body-md text-secondary">© 2026 ESSENTIA Sanctuary. All rights reserved.</span>
+    <div class="flex gap-8">
+      <a href="#" class="text-caption text-secondary" style="text-decoration: none;">Privacy Policy</a>
+      <a href="#" class="text-caption text-secondary" style="text-decoration: none;">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
