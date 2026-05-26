@@ -267,7 +267,7 @@ ul {
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: var(--shadow-nav);
@@ -450,17 +450,23 @@ ul {
   max-width: var(--container-max);
   margin: 0 auto;
   transition: padding var(--transition);
+   height: 104px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 12px;
+    height: 100%;
 }
 
+  
+
 .nav-logo img {
-  width: 40px;
-  height: 40px;
+  height: 104px !important; /* Matches navbar total height */
+    width: auto !important;   /* Keeps aspect ratio */
   object-fit: contain;
   flex-shrink: 0;
   display: block;
@@ -605,59 +611,69 @@ ul {
 }
 
 /* --- Footer --- */
+/* Base site footer configuration */
 .site-footer {
-  background-color: var(--surface-container-highest);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  width: 100%;
+  background-color: #fff; /* Matches your background palette */
 }
 
-.site-footer--dark {
-  background-color: var(--primary-container);
+/* 4-Column Header Grid Configuration */
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr); /* Gives the logo text extra width */
+  gap: 40px;
+  align-items: flex-start; /* Ensures columns align perfectly along the top line */
 }
 
-.footer-grid {
-  padding-top: var(--section-gap-md);
-  padding-bottom: var(--section-gap-md);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(194, 200, 195, 0.3);
-  padding: 32px var(--margin-mobile);
-  text-align: center;
-}
-
-.footer-bottom--flex {
+/* Utilities mapping to your layout classes */
+.flex {
   display: flex;
+}
+
+.flex-col {
   flex-direction: column;
-  align-items: center;
+}
+
+.gap-4 {
   gap: 16px;
 }
 
-.footer-input-wrap {
-  position: relative;
+.gap-8 {
+  gap: 32px;
 }
 
-.footer-input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--outline-variant);
-  padding: 8px 32px 8px 0;
-  outline: none;
+/* Bottom Row Alignment */
+.footer-bottom--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08); /* Clean dividers line */
 }
 
-.footer-input:focus {
-  border-bottom-color: var(--on-tertiary-container);
+/* Typography Overrides to remove default margins */
+.text-label {
+  margin: 0 0 8px 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
 }
 
-.footer-input-btn {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--primary);
-  cursor: pointer;
+.grid-footer a {
+  text-decoration: none;
+}
+
+/* Mobile Responsiveness Layout adjustment */
+@media (max-width: 768px) {
+  .grid-footer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom--flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 /* --- Forms --- */
