@@ -460,6 +460,7 @@ ul {
   align-items: center;
   gap: 12px;
     height: 100%;
+
 }
 
   
@@ -470,6 +471,7 @@ ul {
   object-fit: contain;
   flex-shrink: 0;
   display: block;
+  
 }
 
 .nav-logo--sm img {
@@ -609,60 +611,231 @@ ul {
   padding: 8px;
   cursor: pointer;
 }
+/* =========================================
+   PREMIUM REAL ESTATE FOOTER - ESSENTIA
+========================================= */
 
-/* --- Footer --- */
-/* Base site footer configuration */
 .site-footer {
-  width: 100%;
-  background-color: #fff; /* Matches your background palette */
+  background: #0B241A;
+  padding-top: 40px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* 4-Column Header Grid Configuration */
-.grid-footer {
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+
   display: grid;
-  grid-template-columns: 1.5fr repeat(3, 1fr); /* Gives the logo text extra width */
-  gap: 40px;
-  align-items: flex-start; /* Ensures columns align perfectly along the top line */
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px;
+
+  align-items: flex-start;
 }
 
-/* Utilities mapping to your layout classes */
-.flex {
+/* =========================================
+   FOOTER COLUMN
+========================================= */
+
+.footer-column {
   display: flex;
-}
-
-.flex-col {
   flex-direction: column;
 }
 
-.gap-4 {
+/* =========================================
+   LOGO
+========================================= */
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 24px;
+
+  filter: brightness(0) invert(1);
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.footer-description {
+  color: #B8C5BE;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 300px;
+  margin-bottom: 28px;
+}
+
+/* =========================================
+   TITLES
+========================================= */
+
+.footer-title {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.footer-column a {
+  color: #B8C5BE;
+  text-decoration: none;
+
+  margin-bottom: 16px;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  transition: all 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #D6B16B;
+
+  transform: translateX(4px);
+}
+
+/* =========================================
+   PARAGRAPH TEXT
+========================================= */
+
+.footer-column p {
+  color: #B8C5BE;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.footer-social {
+  display: flex;
+  align-items: center;
   gap: 16px;
 }
 
-.gap-8 {
-  gap: 32px;
+.footer-social span {
+  color: #ffffff;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-/* Bottom Row Alignment */
-.footer-bottom--flex {
+.footer-social span:hover {
+  color: #D6B16B;
+
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   BOTTOM FOOTER
+========================================= */
+
+.footer-bottom {
+  max-width: 1200px;
+
+  margin: 30px auto 0 auto;
+  padding: 15px 40px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08); /* Clean dividers line */
 }
 
-/* Typography Overrides to remove default margins */
-.text-label {
-  margin: 0 0 8px 0;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
+/* COPYRIGHT */
+
+.footer-bottom p {
+  color: #7E8C85;
+
+  font-size: 14px;
+  margin: 0;
 }
 
-.grid-footer a {
+/* BOTTOM LINKS */
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom-links a {
+  color: #7E8C85;
+
   text-decoration: none;
+  font-size: 14px;
+
+  transition: 0.3s ease;
 }
 
+.footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    padding-top: 60px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 40px;
+  }
+
+  .footer-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 16px;
+
+    text-align: center;
+  }
+
+}
+ 
 /* Mobile Responsiveness Layout adjustment */
 @media (max-width: 768px) {
   .grid-footer {
@@ -1049,7 +1222,7 @@ ul {
 
 .hero__subtitle {
   font-size: var(--text-body-lg);
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   margin-bottom: 48px;
   max-width: 672px;
   margin-left: auto;
