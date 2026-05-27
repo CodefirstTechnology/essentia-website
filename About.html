@@ -55,127 +55,204 @@
     </div>
   </div>
 
-  <main>
-    <section class="container about-hero-grid" aria-labelledby="about-hero-heading">
-      <div class="about-hero__text">
-        <span class="text-label text-gold uppercase tracking-widest" style="display:block; margin-bottom: 16px;">Our Philosophy</span>
-        <h1 id="about-hero-heading" class="text-display-lg text-primary" style="margin-bottom: 32px;">
-          A Thoughtfully Planned Township   <br>
-          <span class="italic font-light">for Modern Living</span>
-        </h1>
-        <p class="text-body-lg text-muted" style="max-width: 36rem; margin-bottom: 40px;">Essentia is a premium plotted development  designed to combine modern infrastructure, open green spaces, and future-ready community living.</p>
-        <div class="about-hero__badges">
-          <div class="badge-pill"><span class="material-symbols-outlined text-primary">eco</span><span class="text-label">Sustainable Core</span></div>
-          <div class="badge-pill"><span class="material-symbols-outlined text-primary">family_restroom</span><span class="text-label">Community First</span></div>
-        </div>
+ <section class="about-toggle-section" aria-labelledby="toggle-heading">
+
+  <div class="flex flex-col items-center">
+
+    <!-- TOGGLE BUTTONS -->
+    <div class="toggle-slider-wrap">
+      <div class="toggle-slider-bg" id="toggle-bg"></div>
+
+      <button type="button"
+        class="toggle-slider-btn is-active"
+        id="btn-experience">
+        Developer Profile
+      </button>
+
+      <button type="button"
+        class="toggle-slider-btn"
+        id="btn-investor">
+        Why Essentia
+      </button>
+    </div>
+
+    <!-- DEVELOPER PROFILE -->
+    <div class="toggle-split w-full" id="content-experience">
+
+      <!-- IMAGE -->
+      <div class="toggle-split__image">
+        <img src="./assets/images/ab.png"
+          alt="Essentia plotted township">
       </div>
-      <div class="about-visual">
-        <div class="about-visual__frame">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuqyx0PBuUTwfF96CSpPsAr0ZPXGqLNX6KLevvPUxHbUscDEcduldt9GRNF2QdRYzP3rb8LvOXKQNF_LbHgw1SCGGWaWsLuxjth0F2WqmzIlFhAnfRrwlWvXfy6LZa6zCjmbaixcc2rbLOtukc4gwsmKjHtMg52Vm905FHAwx4iAcJIiFU3ivuc-GNlUKn2VXdDXw1iF7y1if6-r8qZYOuSzd73udgB06fEspEaZx8MmSAazzLzymeFiNBfakTKZGdU3D_4Tc-PjZF" alt="Happy family in garden">
-          <div class="hero-gradient inset-0 absolute"></div>
-        </div>
-        <aside class="float-card float-card--left glass-card">
-          <span class="material-symbols-outlined icon-xl text-gold" style="margin-bottom: 16px;">energy_savings_leaf</span>
-          <h4 class="text-headline-md text-primary" style="font-size: var(--text-body-lg); margin-bottom: 8px;">Biophilic Design</h4>
-          <p class="text-caption text-muted">Designed with landscaped greens, open spaces, and sustainable planning principles to create a healthier living environment.</p>
-        </aside>
-        <aside class="float-card float-card--right glass-card">
-          <div class="flex items-center gap-4">
-            <div class="float-card__icon-circle"><span class="material-symbols-outlined">verified</span></div>
-            <div>
-              <div class="text-label text-primary">Eco-Certified</div>
-              <div class="text-caption text-secondary">Gold Standard Town Planning</div>
+
+      <!-- CONTENT -->
+      <div class="toggle-split__content toggle-split__content--pad">
+
+        <span class="text-label text-gold uppercase tracking-widest"
+          style="display:block; margin-bottom: 16px;">
+          Developer Profile
+        </span>
+
+        <h3 class="text-headline-lg text-primary">
+          Crafting Premium Plot Developments Since 2014
+        </h3>
+
+        <p class="text-body-lg text-muted">
+          Goldmark Developers has built a strong reputation in
+          premium plotted developments across Pune, offering
+          legally clear, future-ready investment opportunities
+          with thoughtfully planned township infrastructure.
+        </p>
+
+        <ul class="feature-list">
+
+          <li>
+            <span class="material-symbols-outlined text-gold">
+              verified
+            </span>
+
+            <span class="text-body-md">
+              Maha-RERA Registered Projects
+            </span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined text-gold">
+              location_city
+            </span>
+
+            <span class="text-body-md">
+              15+ Successful Township Developments
+            </span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined text-gold">
+              account_balance
+            </span>
+
+            <span class="text-body-md">
+              Transparent Legal Documentation
+            </span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- WHY ESSENTIA -->
+    <div class="toggle-split w-full is-hidden" id="content-investor">
+
+      <!-- LEFT SIDE -->
+      <div class="toggle-split__content toggle-split__text-col toggle-split__content--pad-right">
+
+        <span class="text-label text-gold uppercase tracking-widest"
+          style="display:block; margin-bottom: 16px;">
+          Why Choose Essentia
+        </span>
+
+        <h3 class="text-headline-lg text-primary">
+          A Future-Ready Township Investment
+        </h3>
+
+        <p class="text-body-lg text-muted">
+          Essentia combines strategic location advantages,
+          green township planning, and future-ready infrastructure
+          to create a premium plotted community designed for
+          long-term value and peaceful living.
+        </p>
+
+        <div class="investor-stats">
+
+          <div class="investor-stat-box">
+            <div class="value">2014</div>
+
+            <div class="text-caption text-muted uppercase">
+              Established
             </div>
           </div>
-        </aside>
-      </div>
-    </section>
 
-    <section class="pillars-section section" aria-labelledby="pillars-heading">
-      <div class="container">
-        <header class="pillars-header">
-          <h2 id="pillars-heading" class="text-headline-lg text-primary">Designed for Living Well</h2>
-          <p class="text-body-lg text-muted">Every aspect of Essentia is thoughtfully planned to deliver comfort, connectivity, security, and a balanced lifestyle experience.</p>
-        </header>
-        <div class="grid grid-3">
-          <article class="pillar-card">
-            <div class="icon-circle"><span class="material-symbols-outlined icon-md">hub</span></div>
-            <h3 class="text-headline-md text-primary">Seamless Connectivity</h3>
-            <p class="text-body-md">Strategically located near Pune’s key infrastructure corridors, offering smooth connectivity to IT hubs, highways, schools, and daily conveniences.</p>
-            <div class="pillar-link">Explore Location <span class="material-symbols-outlined">arrow_forward</span></div>
-          </article>
-          <article class="pillar-card">
-            <div class="icon-circle"><span class="material-symbols-outlined icon-md">home_max</span></div>
-            <h3 class="text-headline-md text-primary">Modern Infrastructure</h3>
-            <p class="text-body-md">Wide internal roads, underground utilities, landscaped avenues, and thoughtfully planned amenities create a future-ready plotted community.</p>
-            <div class="pillar-link">View Residences <span class="material-symbols-outlined">arrow_forward</span></div>
-          </article>
-          <article class="pillar-card">
-            <div class="icon-circle"><span class="material-symbols-outlined icon-md">groups_3</span></div>
-            <h3 class="text-headline-md text-primary">Community Living</h3>
-            <p class="text-body-md">Clubhouses, open parks, wellness spaces, and recreational amenities encourage a connected and vibrant community lifestyle.</p>
-            <div class="pillar-link">The Lifestyle <span class="material-symbols-outlined">arrow_forward</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
+          <div class="investor-stat-box">
+            <div class="value">15+</div>
 
-    <section class="about-toggle-section" aria-labelledby="toggle-heading">
-      <div class="flex flex-col items-center">
-        <div class="toggle-slider-wrap">
-          <div class="toggle-slider-bg" id="toggle-bg"></div>
-          <button type="button" class="toggle-slider-btn is-active" id="btn-experience">Experience View</button>
-          <button type="button" class="toggle-slider-btn" id="btn-investor">Investor View</button>
-        </div>
-        <div class="toggle-split w-full" id="content-experience">
-          <div class="toggle-split__image">
-            <img src="./assets/images/AmentiesSec.jpeg">
-          </div>
-          <div class="toggle-split__content toggle-split__content--pad">
-            <h3 class="text-headline-lg text-primary">Lifestyle Amenities for Everyday Living</h3>
-            <p class="text-body-lg text-muted">Essentia offers thoughtfully curated lifestyle amenities designed to support recreation, wellness, family living, and peaceful everyday experiences.</p>
-            <ul class="feature-list">
-              <li><span class="material-symbols-outlined text-gold">water_drop</span><span class="text-body-md">Community Gathering Spaces</span></li>
-              <li><span class="material-symbols-outlined text-gold">psychology</span><span class="text-body-md">Landscaped Parks & Walking Tracks</span></li>
-              <li><span class="material-symbols-outlined text-gold">forest</span><span class="text-body-md">Secure Gated Community</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="toggle-split w-full is-hidden" id="content-investor">
-          <div class="toggle-split__content toggle-split__text-col toggle-split__content--pad-right">
-            <h3 class="text-headline-lg text-primary">Unrivaled Growth</h3>
-            <p class="text-body-lg text-muted">Strategically positioned in the city's fastest-growing corridor, Essentia represents a blue-chip asset with projected 18% annual capital appreciation.</p>
-            <div class="investor-stats">
-              <div class="investor-stat-box"><div class="value">12.5%</div><div class="text-caption text-muted uppercase">Rental Yield</div></div>
-              <div class="investor-stat-box"><div class="value">40%</div><div class="text-caption text-muted uppercase">Green Coverage</div></div>
+            <div class="text-caption text-muted uppercase">
+              Projects Delivered
             </div>
           </div>
-          <div class="toggle-split__image toggle-split__image-col">
-            <div class="roadmap-panel">
-              <div class="roadmap-inner">
-                <h4 class="text-label">Development Roadmap 2024-2026</h4>
-                <div class="timeline-item">
-                  <span class="timeline-dot"></span>
-                  <div class="timeline-title text-label">Phase 1: Infrastructure</div>
-                  <div class="text-caption" style="opacity:0.6;">Completed Q2 2024</div>
-                </div>
-                <div class="timeline-item is-active">
-                  <span class="timeline-dot"></span>
-                  <div class="timeline-title text-label">Phase 2: Residential Handover</div>
-                  <div class="text-caption" style="opacity:0.6;">In Progress - Q4 2025</div>
-                </div>
-                <div class="timeline-item is-dim">
-                  <span class="timeline-dot"></span>
-                  <div class="timeline-title text-label">Phase 3: Retail &amp; Leisure</div>
-                  <div class="text-caption">Scheduled Q2 2026</div>
-                </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="toggle-split__image toggle-split__image-col">
+
+        <div class="roadmap-panel">
+
+          <div class="roadmap-inner">
+
+            <h4 class="text-label">
+              Township Highlights
+            </h4>
+
+            <!-- ITEM -->
+            <div class="timeline-item is-active">
+
+              <span class="timeline-dot"></span>
+
+              <div class="timeline-title text-label">
+                Strategic Pune Connectivity
               </div>
+
+              <div class="text-caption" style="opacity:0.6;">
+                Located near rapidly developing growth corridors
+              </div>
+
             </div>
+
+            <!-- ITEM -->
+            <div class="timeline-item is-active">
+
+              <span class="timeline-dot"></span>
+
+              <div class="timeline-title text-label">
+                Gated Township Planning
+              </div>
+
+              <div class="text-caption" style="opacity:0.6;">
+                Wide internal roads & organized infrastructure
+              </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="timeline-item is-active">
+
+              <span class="timeline-dot"></span>
+
+              <div class="timeline-title text-label">
+                Green Open Spaces
+              </div>
+
+              <div class="text-caption">
+                Landscaped parks & peaceful community living
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </div>
-    </section>
-  </main>
+
+    </div>
+
+  </div>
+
+</section>
 
 <footer class="site-footer">
 
